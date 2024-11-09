@@ -38,9 +38,22 @@ function loadImageState() {
 }
 
 function toggleButton(buttons, counters, gameState, index, activeSrc, inactiveSrc, oppositeButtons, oppositeCounters, oppositeState) {
-    const increment = gameState[index] ? -1 : 1;
+    let increment;
+
+    if (gameState[index]) {
+    increment = -1;
+    } else {
+    increment = 1;
+    }
+
     counters[index].textContent = Math.max(0, parseInt(counters[index].textContent) + increment);
-    buttons[index].src = gameState[index] ? inactiveSrc : activeSrc;
+
+    if (gameState[index]) {
+        buttons[index].src = inactiveSrc;
+    } else {
+        buttons[index].src = activeSrc;
+    }   
+
     gameState[index] = !gameState[index];
 
     if (oppositeState[index]) {
@@ -78,7 +91,11 @@ function sortGames(order) {
   const sortedGames = Array.from(games).sort((a, b) => {
     const likesA = getLikes(a);
     const likesB = getLikes(b);
-    return order === "asc" ? likesA - likesB : likesB - likesA;
+    if (order === "asc") {
+        return likesA - likesB;
+      } else {
+        return likesB - likesA;
+      }      
   });
 
   games[0].parentElement.append(...sortedGames);
