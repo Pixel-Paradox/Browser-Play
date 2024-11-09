@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    color: white;
+    background-image: url(bg.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+
+.nav {
+    background-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(15px);
+    position: fixed;
+    z-index: 2000;
+    width: 100%;
+    display: flex;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+
+.txtNav {
+    font-size: 1.4em;
+    cursor: pointer;
+}
+
+.blockGame {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 120px;
+    justify-content: center;
+    padding: 5%;
+    position: relative;
+    top: 70px;
+
+}
+
+.game {
+    width: 350px;
+    height: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    animation: appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0%;
+    box-shadow: 20px 10px 47px -6px rgba(0,0,0,0.75);
+}
+
+@keyframes appear {
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.linkGame {
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 2000;
+}
+
+.imgGame {
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    transition: 2s;
+    z-index: -2000;
+    top: 0;
+}
+
+.titreGame {
+    font-size: 1.5em;
+    padding: 10px 15px 10px 15px;
+    background-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(15px);
+    width: 200px;
+    border-radius: 10px;
+    position: absolute;
+    text-align: center;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 2s;
+    z-index: -2000;
+}
+
+.game:hover .titreGame {
+    width: 90%;
+}
+
+.game:hover .imgGame {
+    scale: 1.5;
+}
+
+.eval {
+    width: 100%;
+    height: 20%;
+    background-color: rgb(74, 78, 87);
+    position: absolute;
+    top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+    color: white;
+}
+
+.blockEval {
+    display: flex;
+    gap: 15px;
+}
+
+.imgEval {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+}
+
+.imgDislike {
+    rotate: 180deg;
+}
+
+.nbEval {
+    font-size: 1.2em;
+    position: relative;
+    top: 5px;
+}
+
+.double {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    gap: 70px;
+
+}
+
+.footer {
+    background-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(15px);
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+}
