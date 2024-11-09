@@ -63,6 +63,9 @@ loadImageState();
 addEventListeners(btnLike, like, gameLike, "like-active.png", "like.png", btnDislike, dislike, gameDislike);
 addEventListeners(btnDislike, dislike, gameDislike, "like-active.png", "like.png", btnLike, like, gameLike);
 
+
+
+
 const btnMoreLike = document.querySelector(".moreLike");
 const btnLessLike = document.querySelector(".lessLike");
 const games = document.querySelectorAll(".game");
