@@ -1,3 +1,9 @@
+//------Https------\\
+
+if (window.location.protocol != "https:") {
+    window.location.protocol="https:";
+}
+
 const btnLike = document.querySelectorAll(".imgLike");  
 const btnDislike = document.querySelectorAll(".imgDislike");  
 const like = document.querySelectorAll(".nbLike");  
