@@ -25,12 +25,7 @@ function checkInputs() {
             </div>
         </div>;
         `;
-        const blob = new Blob([htmlContent], { type: "application/javascript" });
 
-        const downloadLink = document.createElement('a');
-        downloadLink.href = URL.createObjectURL(blob);
-        downloadLink.download = "game.js";
-        downloadLink.click();
     } else {
         alert("Veuillez entrer toutes les informations.");
     }
