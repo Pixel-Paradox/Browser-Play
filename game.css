@@ -13,5 +13,16 @@
 
 body {
     min-height: 100vh;
+    color: white;
+    background-color: rgb(75, 99, 75);
     font-family: "Ubuntu", sans-serif;
+}
+
+.gameIframe {
+    width: 70vw;
+    height: 70vh;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
 }
