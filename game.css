@@ -1,28 +1,90 @@
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-
-@font-face {
-    font-family: "Ubuntu";
-    src: url("fonts/Ubuntu-Regular.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
-
-body {
-    min-height: 100vh;
-    color: white;
-    background-color: rgb(75, 99, 75);
-    font-family: "Ubuntu", sans-serif;
+.gameBlock {
+    box-shadow: 0px 0px 47px -10px rgba(0, 0, 0, 0.75);
+    overflow: hidden;
+    position: absolute;
+    width: max-content;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-bottom: 20px;
 }
 
 .gameIframe {
-    width: 70vw;
-    height: 70vh;
+    width: 65vw;
+    height: 900px;
+    position: relative;
+    top: 3px;
+}
+
+.blockIframe {
+    width: 65vw;
+    background-color: rgb(74, 78, 87);
+    display: flex;
+    padding: 20px 30px 20px 30px;
+    gap: 70px;
+}
+
+.gameTitre {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.eval {
+    width: initial;
+    height: initial;
+    background-color: initial;
+    position: initial;
+    top: initial;
+}
+
+.double {
     position: absolute;
     left: 50%;
-    top: 40%;
     transform: translate(-50%, -50%);
+    top: 95%;   
+}
+
+@media screen and (max-height: 1225px) {
+    .gameBlock {
+        position: relative;
+        top: 335px;
+    }
+
+    .gameIframe {
+        height: 500px;
+    }
+
+    .double {
+        position: relative;
+        top: 100px;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .gameIframe {
+        width: 90vw;
+    }
+    
+    .blockIframe {
+        width: 90vw;
+    }    
+}
+
+@media screen and (max-width: 760px) {
+    .blockIframe {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        overflow: auto;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .eval {
+        flex-direction: column;
+        gap: 15px;
+    }
 }

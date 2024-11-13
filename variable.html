@@ -4,25 +4,37 @@
     <head>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="browser-play.css"/>
+        <link rel="stylesheet" href="like.css"/>
         <link rel="stylesheet" href="game.css"/>
-        <script defer src="game.js"></script>
+        <script defer src="cardGame.js"></script>
+        <script defer src="addCardGame.js"></script>
+        <script defer src="sort.js"></script>
         <title>variable</title>
     </head>
 
     <body>
         <div class="gameBlock">
-            <iframe class="gameIframe" src="http://slither.com/io" frameborder="0"></iframe>
-            <div class="gameTitre"></div>
-            <div class="eval">
-                <div class="blockEval">
-                    <img class="imgEval imgLike" src="like.png" alt="Like">
-                    <div class="nbEval nbLike">0</div>
-                </div>
-                <div class="blockEval">
-                    <img class="imgEval imgDislike" src="like.png" alt="Dislike">
-                    <div class="nbEval nbDislike">0</div>
+            <iframe class="gameIframe" src="https://chess.com" frameborder="0"></iframe>
+
+            <div class="blockIframe">
+                <a class="gameTitre" href="variable" target="_blank" rel="noopener noreferrer">variable</a>
+                <div class="eval">
+                    <div class="blockEval">
+                        <img class="imgEval imgLike" src="like.png" alt="Like">
+                        <div class="nbEval nbLike">0</div>
+                    </div>
+                    <div class="blockEval">
+                        <img class="imgEval imgDislike" src="like.png" alt="Dislike">
+                        <div class="nbEval nbDislike">0</div>
+                    </div>
                 </div>
             </div>
+        </div>
+
+        <div class="double">
+            <a class="footer" href="https://rmbi.ch/vital/donation">₿</a>
+            <a class="footer" href="https://github.com/Vital-Vuillaume">ⓒ 2024 - Vital production</a>
         </div>
     </body>
 </html>
