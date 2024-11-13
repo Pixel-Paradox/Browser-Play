@@ -23,21 +23,5 @@ function addGame(variable, img, title) {
     blockGame.innerHTML += htmlContent;
 }
 
-// Fonction pour mettre à jour l'iframe et le titre
-function updateGameContent(url, title) {
-    gameIframe.src = url;
-    gameTitle.textContent = title;
-}
-
-blockGame.addEventListener("click", function(event) {
-    const link = event.target.closest(".linkGame");
-    if (link) {
-        event.preventDefault();
-        const url = link.getAttribute("data-url");
-        const title = link.getAttribute("data-title");
-        updateGameContent(url, title);
-    }
-});
-
 addGame("https://rmbi.ch/vital/pad", "game.png", "Pixel Adventure");
 addGame("https://aggar.io", "game.png", "Agar.io");
