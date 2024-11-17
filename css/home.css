@@ -3,7 +3,7 @@
     backdrop-filter: blur(15px);
     position: fixed;
     z-index: 2000;
-    width: 900px;
+    width: 715px;
     display: flex;
     height: 70px;
     justify-content: center;
@@ -112,7 +112,7 @@
     color: white;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 750px) {
     .nav {
         flex-direction: column;
         height: max-content;
@@ -128,5 +128,23 @@
 
     .blockGame {
         top: 100px;
+    }
+
+    .double {
+        padding-top: 50px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .blockGame {
+        padding: 50px 0px 50px 0px;
+    }
+
+    .game {
+        width: 90%;
+    }
+
+    .eval {
+        gap: 50px;
     }
 }

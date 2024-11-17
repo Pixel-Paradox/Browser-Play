@@ -73,18 +73,19 @@
     }    
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 500px) {
     .blockIframe {
         flex-direction: column;
         gap: 10px;
         text-align: center;
         overflow: auto;
     }
-}
 
-@media screen and (max-width: 380px) {
     .eval {
-        flex-direction: column;
-        gap: 15px;
+        gap: 70px;
+    }
+
+    .double {
+        padding-top: 0;
     }
 }
