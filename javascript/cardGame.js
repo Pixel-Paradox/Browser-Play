@@ -10,17 +10,18 @@ function addGame(img, title, likes, dislikes) {
         <div class="titreGame">${title}</div>
         <div class="eval">
             <div class="blockEval">
-                <img class="imgEval imgLike" src="images/like.png" alt="Like">
+                <img class="imgEval imgLike" src="images/like.png" alt="Likes">
                 <div class="nbEval nbLike">${likes}</div>
             </div>
             <div class="blockEval">
-                <img class="imgEval imgDislike" src="images/like.png" alt="Dislike">
+                <img class="imgEval imgDislike" src="images/like.png" alt="Dislikes">
                 <div class="nbEval nbDislike">${dislikes}</div>
             </div>
         </div>
     </div>
     `;
     blockGame.innerHTML += htmlContent;
+    updateGames();
 }
 
 async function getGames() {
