@@ -6,5 +6,5 @@ include_once(dirname(__FILE__) . "/database.php");
 
 $db = new Database;
 
-$db->query("INSERT INTO browserplay_games (`name`, `link`, `likes`, `dislikes`) VALUES ('Pixel-Adventure', 'rmbi.ch/vital/pad', 976, 454)");
+$db->query("INSERT INTO browserplay_games (`name`, `link`, `likes`, `dislikes`) VALUES ('Pixel-Adventure', 'rmbi.ch/vital/pad', 978, 454)");
 echo "<h1>Je suis un géni</h1>";
